@@ -1,0 +1,8 @@
+{
+  "name": "babel-setup-project",
+  "version": "1.0.0",
+  "description": "通过babel实现dom元素的namespace",
+  "main": "index.js",
+  "author": "xshaobaozi <xshaobaozi@hotmail.com>",
+  "license": "MIT"
+}
