@@ -26,7 +26,7 @@
                 "serve"
             ],
             "runtimeExecutable": "npm",
-            "localRoot": "${workspaceFolder}\\example\\cli3",
+            "localRoot": "${workspaceFolder}\\example\\cli3-v3",
             "skipFiles": [
                 "<node_internals>/**"
             ],

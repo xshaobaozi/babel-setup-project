@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import Button from './components/button.vue';
 const count = ref(0);
 const handleAdd = () => {
   count.value = count.value + 1;
@@ -9,11 +10,15 @@ const handleAdd = () => {
 <template>
   <div class="el-primary button" @click="handleAdd">el-primary {{ count }}</div>
   <div class="test-primary button">test-primary</div>
+  <Button></Button>
 </template>
 
-<style scoped>
+<style>
 .el-primary {
   background-color: #6161d3;
+}
+.test-primary {
+  background-color: rgb(36, 168, 133);
 }
 .button {
   width: 120px;
