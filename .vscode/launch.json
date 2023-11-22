@@ -19,14 +19,42 @@
         //     "type": "node"
         // },
         {
-            "name": "Launch via NPM",
+            "name": "cli3 vue3",
             "request": "launch",
             "runtimeArgs": [
                 "run-script",
-                "serve"
+                "dev"
             ],
             "runtimeExecutable": "npm",
             "localRoot": "${workspaceFolder}\\example\\cli3-v3",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "cli3 vue2",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "dev"
+            ],
+            "runtimeExecutable": "npm",
+            "localRoot": "${workspaceFolder}\\example\\cli3-v2",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "vite vue3",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "dev"
+            ],
+            "runtimeExecutable": "npm",
+            "localRoot": "${workspaceFolder}\\example\\vite",
             "skipFiles": [
                 "<node_internals>/**"
             ],

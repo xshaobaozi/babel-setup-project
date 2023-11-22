@@ -4,5 +4,8 @@
   "description": "通过babel实现dom元素的namespace",
   "main": "index.js",
   "author": "xshaobaozi <xshaobaozi@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/types": "^7.23.4"
+  }
 }

@@ -1,17 +1,19 @@
 <script setup>
 import { ref } from "vue";
-import Button from './components/button.vue';
+import myButton from './components/button.vue';
 const count = ref(0);
+const demo = ref('el-primary')
 const handleAdd = () => {
   count.value = count.value + 1;
 };
 </script>
 
 <template>
-  <div class="el-primary button" @click="handleAdd">el-primary {{ count }}</div>
-  <div class="test-primary button">test-primary</div>
-  <div class="demo-primary button">demo-primary</div>
-  <Button></Button>
+  <div class="el-primary button" @click="handleAdd">el-primary 阿a2{{ count }}</div>
+  <div class="test-primary button">test-primary </div>
+  <div class="demo-primary button">test-primary </div>
+  <myButton></myButton>
+  {{ demo }}33
 </template>
 
 <style>
@@ -22,7 +24,7 @@ const handleAdd = () => {
   background-color: rgb(36, 168, 133);
 }
 .button {
-  width: 120px;
+  width: 200px;
   height: 30px;
   border-radius: 4px;
   border: 1px solid black;
