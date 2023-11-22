@@ -1,11 +1,9 @@
 <template>
   <div id="app">
     <div class="el-primary button" @click="handleAdd">el-primary 阿a2{{ count }}</div>
-    <div class="test-primary button">test-primary 23</div>
-    <div class="demo-primary button">demo-primary 2</div>
     <myButton></myButton>
     <myButton2></myButton2>
-    {{ demo }}33
+    {{ demo }}332
   </div>
 </template>
 

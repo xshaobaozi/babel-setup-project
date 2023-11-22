@@ -14,7 +14,7 @@ const replaceVueNodes = function (options = {}) {
             StringLiteral(path, state) {
                 const { target, replaceStr } = options
                 if (vaildateReplaceStr(path.node.value, target)) {
-                    if (path.parent?.key?.name === 'class' || path.parent?.key?.value === 'class') {
+                    if (['class', 'staticClass'].includes(path.parent?.key?.name) || path.parent?.key?.value === 'class') {
                         const newNode = types.StringLiteral(replaceStrFn(path.node.value, target, replaceStr));
                         path.replaceWith(newNode)
                     }
