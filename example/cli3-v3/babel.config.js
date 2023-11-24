@@ -1,9 +1,13 @@
 const replaceVueNodes = require('./../../packages/babel/commonjs');
 const params = require('./../config')
-debugger
+const path = require('path')
 module.exports = {
   presets: ["@vue/cli-plugin-babel/preset"],
   plugins: [
-      replaceVueNodes(params)
+      // replaceVueNodes(params.babelConfig)
+  ],
+  include: [
+    './src/**/*',
+    path.resolve('node_modules/element-plus')
   ]
 };

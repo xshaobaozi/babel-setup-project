@@ -1,10 +1,8 @@
 const replaceCls = require('./../../packages/postcss')
+const params = require('./../config')
 module.exports =  {
     plugins: [
         // demo2(),
-        replaceCls({
-            target: 'el-',
-            result: 'demo-'
-        })
+        replaceCls(params.postcssConfig)
     ]
 }

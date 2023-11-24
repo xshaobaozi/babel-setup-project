@@ -1,4 +1,4 @@
-function replaceStr(str, prefix, replace) {
+function replaceStrFn(str, prefix, replace) {
     const reg = new RegExp(`((^|(\\s)+|\\.|=|\\-\\-))${prefix}`, 'g');
     return str.replace(reg, `$1${replace}`);
   }
@@ -30,15 +30,23 @@ function replaceStr(str, prefix, replace) {
       }
       */
       Once(root) {
-        const { target, result } = opts
+        const { target, replaceStr } = opts
         root.walkRules(rule => {
+          rule.walkDecls(function (decl) {
+            if (decl.prop.indexOf(target) !== -1) {
+              decl.prop = replaceStrFn(decl.prop, target, replaceStr);
+            }
+            if (decl.value.indexOf(target) !== -1) {
+              decl.value = replaceStrFn(decl.value, target, replaceStr);
+            }
+          });
           const { selector } = rule
           if (!selector) {
             return
           }
           if (selector.includes(target)) {
             const ruleClone = rule.clone()
-            ruleClone.selector = replaceStr(ruleClone.selector, target, result)
+            ruleClone.selector = replaceStrFn(ruleClone.selector, target, replaceStr)
             rule.replaceWith(ruleClone);
           }
         })

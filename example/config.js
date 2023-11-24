@@ -1,4 +1,12 @@
-module.exports = {
+const babelConfig = {
     target: 'el-',
-    replaceStr: 'test-'
+    replaceStr: 'demo-'
+}
+const postcssConfig = {
+    target: 'el-',
+    replaceStr: 'setup-'
+}
+module.exports = {
+    babelConfig,
+    postcssConfig
 }

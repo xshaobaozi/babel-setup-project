@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <div class="el-primary button" @click="handleAdd">el-primary 阿a2{{ count }}</div>
+    <div class="el-primary button" @click="handleAdd">el-primry div样式</div>
     <myButton></myButton>
     <myButton2></myButton2>
-    {{ demo }}332
+    <el-button type="primary" style="margin-top: 6px;">element组件</el-button>
+    <p>
+      {{ demo }}
+    </p>
   </div>
 </template>
 
@@ -20,7 +23,7 @@ export default {
   data() {
     return {
       count: 0,
-      demo: 'el-primary'
+      demo: 'el-primary data的'
     }
   },
   methods: {

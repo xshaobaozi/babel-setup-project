@@ -1,6 +1,6 @@
 <template>
-    <div class="el-primary button">
-        tempate el-primary 2
+    <div class="el-primary button 2 template样式">
+        el-primary template组件
     </div>
 </template>
 
